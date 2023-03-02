@@ -1,4 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Event_Managment.SiteMaster" %>
+<%@ Register Src="~/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+
+
 
 <!DOCTYPE html>
 
@@ -50,13 +53,8 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Home">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><asp:LinkButton ID="Li" runat="server" Text="Button" OnClick="Li_Click" CausesValidation="false">Login</asp:LinkButton></li>
-                        <li><asp:LinkButton ID="Lo" runat="server" Text="Button" OnClick="Btn_Click" Visible="False">Logout</asp:LinkButton></li>
-                        <li><asp:LinkButton ID="Ri" runat="server" Text="Button" OnClick="Ri_Click" CausesValidation="false">Register</asp:LinkButton></li>
-                        <asp:Label runat="server" Visible="false" ID="Uname" >Hello user</asp:Label>
+                       <li> <uc1:Header runat="server" id="Header" /></li>
+                        <li><asp:Label runat="server" Visible="false" ID="Uname">Hello user</asp:Label></li>
                     </ul>
                 </div>
             </div>
@@ -66,8 +64,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
+                <p>&copy;       </footer>
         </div>
         <style type="text/css">  
         .TableCSS   

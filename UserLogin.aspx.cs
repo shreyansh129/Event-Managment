@@ -19,7 +19,7 @@ namespace Event_Managment
             {
                 con.Open();
             }
-
+            
             string checkUser = "select * from [userInfo] where Email='" + mail.Text.Trim() + "'and Password='" + Password.Text.Trim() + "';";
             SqlCommand cmdCheck = new SqlCommand(checkUser, con);
             SqlDataReader read = cmdCheck.ExecuteReader();
@@ -27,9 +27,6 @@ namespace Event_Managment
             if (read.Read())
             {
                 Session["Email"] = read.GetValue(0).ToString();
-                Session["Password"] = read.GetValue(1).ToString();
-                Session["FullName"] = read.GetValue(2).ToString();
-                Session["Role"] = "User";
                 con.Close();
 
                 Response.Redirect("Home.aspx");

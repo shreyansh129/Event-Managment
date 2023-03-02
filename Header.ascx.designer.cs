@@ -11,34 +11,43 @@ namespace Event_Managment
 {
 
 
-    public partial class SiteMaster
+    public partial class Header
     {
 
         /// <summary>
-        /// Header control.
+        /// Li control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Event_Managment.Header Header;
+        protected global::System.Web.UI.WebControls.LinkButton Li;
 
         /// <summary>
-        /// Uname control.
+        /// Lo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Uname;
+        protected global::System.Web.UI.WebControls.LinkButton Lo;
 
         /// <summary>
-        /// MainContent control.
+        /// Ri control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.LinkButton Ri;
+
+        /// <summary>
+        /// CE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton CE;
     }
 }

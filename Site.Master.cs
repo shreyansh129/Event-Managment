@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Event_Managment
 {
@@ -11,45 +7,54 @@ namespace Event_Managment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (Session["Role"].Equals(""))
                 {
-                    Lo.Visible = false;
+                    CE.Visible = false;
+                   *//* Lo.Visible = false;
                     Li.Visible = true;
-                    Ri.Visible = true;
+                    Ri.Visible = true;*//*
+
+                    
                 }
                 else if (Session["Role"].Equals("User"))
                 {
-                    Lo.Visible = true;
+                    CE.Visible = true;
+                    *//*Lo.Visible = true;
                     Li.Visible = false;
-                    Ri.Visible = false;
+                    Ri.Visible = false;*//*
                     Uname.Visible = true;
                     Uname.Text = "Hello" + Session["Email"];
                 }
             }
-            catch { }
-            
-            
+            catch { }*/
+
+
         }
 
-        protected void Btn_Click(object sender, EventArgs e)
+        public void Btn_Click(object sender, EventArgs e)
         {
+
+            Session.Abandon();
             Session.Clear();
             Response.Redirect("UserLogin.aspx");
-           
-            
         }
 
         protected void Li_Click(object sender, EventArgs e)
         {
-            
+
             Response.Redirect("UserLogin.aspx");
         }
 
         protected void Ri_Click(object sender, EventArgs e)
         {
             Response.Redirect("UserRegister.aspx");
+        }
+
+        protected void CE_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("createEvents");
         }
     }
 }
